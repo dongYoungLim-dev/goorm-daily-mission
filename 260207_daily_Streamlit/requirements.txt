@@ -1,0 +1,5 @@
+# Gitpod 및 로컬 환경에서 pip install -r requirements.txt 로 사용하는 의존성 목록 (260207_daily_Streamlit/streamlit_dev.py 기준)
+
+streamlit>=1.28
+pandas>=2.0
+numpy>=1.24
