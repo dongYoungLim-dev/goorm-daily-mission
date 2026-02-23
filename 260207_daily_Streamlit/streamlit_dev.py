@@ -1,17 +1,12 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
+from streamlit_pandas_profiling import st_profile_report
 
-st.title('My First Streamlit App')
-st.write('Hello, World!')
+st.header('`streamlit_pandas_profiling`')
 
-df = pd.DataFrame({
-  'first column': [1, 2, 3, 4],
-  'second column': [10, 20, 30, 40]
-})
+df = pd.read_csv('https://raw.githubusercontent.com/dataprofessor/data/master/penguins_cleaned.csv')
 
-st.write(df)
+pr = df.profile_report()
+st_profile_report(pr)
 
-chart_data = pd.DataFrame(
-  np.random.randn(20, 3),
-)
